@@ -1,3 +1,7 @@
+## MASSRELEVANCE FORK DETAILS
+
+* Fix a bug with UTF-8 encoded locations by levaraging URI::escape instead of CGI::escape.
+
 ## GEOKIT GEM DESCRIPTION
 
 The Geokit gem provides:
