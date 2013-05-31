@@ -1,6 +1,6 @@
 module Geokit
   module Inflector
-    require 'cgi'
+    require 'uri'
 
     extend self
 
@@ -28,7 +28,7 @@ module Geokit
     end
 
     def url_escape(s)
-      CGI.escape(s)
+      URI::escape(s)
     end
 
     def camelize(str)
