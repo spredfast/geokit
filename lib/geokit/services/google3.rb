@@ -53,7 +53,7 @@ module Geokit
           signature = sign_gmap_bus_api_url(urlToSign, Geokit::Geocoders::google_cryptographic_key)
           submit_url =  "http://maps.googleapis.com" + urlToSign + "&signature=#{signature}"
         else
-          submit_url = "http://maps.google.com/maps/api/geocode/json?sensor=false&address=#{Geokit::Inflector::url_escape(address_str)}#{bias_str}"
+          submit_url = "https://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=#{Geokit::Inflector::url_escape(address_str)}#{bias_str}&key=#{Geokit::Geocoders::google}"
         end
 
         res = self.call_geocoder_service(submit_url)
